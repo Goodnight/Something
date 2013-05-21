@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?> 
+<tree id="0"> 
+	<item text="中国电信集团" id="books" open="1" call="1" select="1">
+		<item text="中国电信上海分公司" id="mystery" open="1">
+		    <item text="变更人员" id="bsthrillers">
+			    <item text="上海电信杂志社" id="lb">
+			   	</item> 
+			</item> 
+			<item text="视讯中心" id="rc" ></item> 
+			<item text="天翼分公司" id="ir" ></item> 
+			<item text="号百分公司" id="jp"></item> 
+			<item text="信息网络部" id="na"></item>
+	<!-- 	<item text="Nancy Atherton" id="na" im0="iconSound.gif"></item>  -->
+		</item> 
+		<item text="中国电信湖北分公司" id="history"> 
+			<item text="十堰分公司" id="jmf"></item> 
+			<item text="荆门分公司" id="jd"></item> 
+			<item text="宜昌分公司" id="ls"></item> 
+			<item text="技术业务支撑中心" id="rle"></item> 
+		</item> 
+		<item text="中国电信西藏分公司" id="horror"> 
+			<item text="拉萨分公司" id="sk"></item> 
+			<item text="林芝分公司" id="db"></item> 
+			<item text="山南分公司" id="mjd"></item> 
+			<item text="阿里分公司" id="km"></item> 
+		</item> 
+		<item text="中国电信江苏分公司" id="fantasy"> 
+			<item text="省企业信息化部（省业务支撑中心）" id="af"></item> 
+			<item text="江苏省公用信息有限公司（互联网）" id="pr"></item> 
+		</item> 
+		<item text="中国电信福建分公司" id="teens"> 
+			<item text="通信信息报" id="jw"></item> 
+			<item text="中国电信厦门分公司" id="mc"></item> 
+			<item text="中国电信泉州分公司" id="gn"></item> 
+			<item text="中国电信福州分公司" id="ab"></item> 
+		</item> 
+	</item> 
+	<item text="实业公司" id="magazines" open="1"> 
+		<item text="实业技术公司" id="mag_sp"></item> 
+	</item> 
+</tree> 
