@@ -28,14 +28,22 @@
 			<item text="省企业信息化部（省业务支撑中心）" id="af"></item> 
 			<item text="江苏省公用信息有限公司（互联网）" id="pr"></item> 
 		</item> 
+ 
+
+	</item> 
+	<item text="实业公司" id="magazines" open="1"> 
+		<item text="实业技术公司" id="mag_sp"></item> 
 		<item text="中国电信福建分公司" id="teens"> 
 			<item text="通信信息报" id="jw"></item> 
 			<item text="中国电信厦门分公司" id="mc"></item> 
 			<item text="中国电信泉州分公司" id="gn"></item> 
 			<item text="中国电信福州分公司" id="ab"></item> 
+		</item>
+		<item text="中国电信重庆分公司" id="chongqing"> 
+			<item text="外包人员" id="wb"></item> 
+			<item text="公众客户部" id="gz"></item> 
+			<item text="建设中心" id="js"></item> 
+			<item text="传输局" id="cs"></item> 
 		</item> 
-	</item> 
-	<item text="实业公司" id="magazines" open="1"> 
-		<item text="实业技术公司" id="mag_sp"></item> 
 	</item> 
 </tree> 
