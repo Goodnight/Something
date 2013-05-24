@@ -32,7 +32,43 @@
 		<!--[if lt IE 9]>
 		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
 		<![endif]-->
-
+		<style type="text/css">
+		.search-remove-tags{
+			-webkit-border-radius: 3px;
+			-moz-border-radius   : 3px;
+			border-radius        : 3px;
+			-moz-background-clip   : padding;
+			-webkit-background-clip: padding-box;
+			background-clip        : padding-box;
+			background-color: #e4e4e4;
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#eeeeee', GradientType=0 ); 
+			background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(20%, #f4f4f4), color-stop(50%, #f0f0f0), color-stop(52%, #e8e8e8), color-stop(100%, #eeeeee));
+			background-image: -webkit-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+			background-image: -moz-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+			background-image: -o-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+			background-image: linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%); 
+			-webkit-box-shadow: 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);
+			-moz-box-shadow   : 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);
+			box-shadow        : 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);
+			color: #333;
+			border: 1px solid #aaaaaa;
+			line-height: 13px;
+			padding: 3px 20px 3px 5px;
+			margin: 3px 0 3px 5px;
+			position: relative;
+			cursor: default;
+		}
+		.search-choice-remove {
+			display: block;
+			position: absolute;
+			right: -5px;
+			top: 4px;
+			width: 12px;
+			height: 12px;
+			font-size: 1px;
+			background: url('assets/css/chosen-sprite.png') -42px 1px no-repeat;
+		}
+		</style>
 	</head>
 
 	<body>
@@ -468,7 +504,6 @@
 						<li>培训资源<span class="divider"><i class="icon-angle-right"></i></span></li>
 						<li>资源管理<span class="divider"><i class="icon-angle-right"></i></span></li>
 						<li>课程列表<span class="divider"><i class="icon-angle-right"></i></span></li>
-						<li class="search-remove-tags">课程<i class="icon-remove"></i></li>
 						<li class="active">全部</li>
 					</ul><!--.breadcrumb-->
 				</div><!--#breadcrumbs-->
@@ -494,11 +529,12 @@
 					<div class="row-fluid">
 						<div class="span12">
 							<h3 class="row-fluid header smaller lighter grey">
-								<span class="span6">
+								<span class="span8">
 									<i class="icon-spinner icon-spin orange bigger-125"></i> 搜索
+									
 								</span><!--/span-->
 							
-								<span class="span6">
+								<span class="span4">
 									<label class="pull-right inline">
 										<small class="muted">高级搜索:</small>
 										<input id="skip-validation" checked type="checkbox" class="ace-switch ace-switch-4" /><span class="lbl"></span>
@@ -515,8 +551,29 @@
 							</form>
 							<div class="row-fluid hide" id="validation-body">
 								<div class="span6">
+									<div class="well well-large">										<ul class="breadcrumb">
+											<li><span>属性：</span></li>
+										    <li><a id="f-1">所有课件</a></li>
+										    <li><a id="f-2">标准课件</a></li>
+										    <li><a id="f-3">非标准课件</a></li>
+										</ul>
+										<ul class="breadcrumb">
+											<li><span>类型：</span></li>
+										    <li><a id="t-1">全部</a></li>
+										    <li><a id="t-2">在线课程</a></li>
+										    <li><a id="t-3">直播课程</a></li>
+										</ul>
+										<ul class="breadcrumb">
+											<li><span>状态：</span></li>
+										    <li><a id="s-1">未发布</a></li>
+										    <li><a id="s-2">已提交</a></li>
+										    <li><a id="s-3">已发布</a></li>
+										    <li><a id="s-4">省不批准</a></li>
+										</ul>
+									</div>
+
 									<form class="form-horizontal" method="get">
-												  
+
 										<div class="control-group">
 											<label class="control-label" for="email">课程名称：</label>
 											<div class="controls">
@@ -531,35 +588,6 @@
 												<div class="span12">
 													<input type="password" name="bianhao" id="bianhao" class="span4" />
 												</div>
-											</div>
-										</div>
-
-										<div calss="control-group">
-											<label class="control-label" for="form-field-select-3">课件属性：</label>
-											<div class="controls">
-												<div class="span12">
-													<select class="chzn-select" id="form-field-select-3" data-placeholder="选择一个属性..">
-														  
-														  <option value='AL'>所有课件</option><option value='AK'>标准课件</option><option value='AZ'>非标准课件</option>
-													</select>
-												</div>
-											</div>
-										</div>
-
-										<div class="control-group">
-											<label class="control-label">类型：</label>
-											<div class="controls">
-												<label>
-													<input name="form-field-radio" type="radio" /><span class="lbl"> 全部</span>
-												</label>
-											
-												<label>
-													<input name="form-field-radio" type="radio" /><span class="lbl"> 在线课程</span>
-												</label>
-											
-												<label>
-													<input name="form-field-radio" type="radio" /><span class="lbl"> 直播课程</span>
-												</label>
 											</div>
 										</div>
 
@@ -588,21 +616,7 @@
 												</div>
 											</div>
 										</div>
-
 										
-										<div calss="control-group">
-											<label class="control-label" for="form-field-select-1">发布状态：</label>
-											<div class="controls">
-												<div class="span12">
-													<select class="chzn-select" id="form-field-select-1" data-placeholder="选择一个状态..">
-														  
-														  <option value='AL'>未发布</option><option value='AK'>已提交</option><option value='AZ'>已发布</option>
-														  <option value='AX'>省不批准</option>
-													</select>
-												</div>
-											</div>
-										</div>
-
 										<div class="control-group">
 											<div class="controls">
 												<div class="span12">
@@ -638,9 +652,19 @@
 					</div>
 					<!-- <div class="hr hr32 hr-dotted"></div> -->
 					<div class="row-fluid">
-						<div class="span12">										
-						<!-- 	<input type="text" placeholder="组织机构&知识分类 (全部)" style="margin-bottom:3px;"> -->
+						<div class="span12">
 							
+							<ul class="breadcrumb" style="margin-top:5px;">
+								<!-- <span class="label label-large label-pink arrowed-right">关键词：</span> -->
+								<!-- <li><h6>已搜索</h6></li> -->
+								关键词：
+								<li class="search-remove-tags">标准课件<a href="#" class="search-choice-remove" rel="1"></a></li>
+								<li class="search-remove-tags">直播课程<a href="#" class="search-choice-remove" rel="1"></a></li>
+								<li class="search-remove-tags">已发布<a href="#" class="search-choice-remove" rel="1"></a></li>
+								<li class="search-remove-tags">中国电信集团<a href="#" class="search-choice-remove" rel="1"></a></li>
+								<li class="search-remove-tags">产品/服务类<a href="#" class="search-choice-remove" rel="1"></a></li>
+								<li class="search-remove-tags">产品管理<a href="#" class="search-choice-remove" rel="1"></a></li>
+							</ul>													
 							<ul class="pull-right" style="margin-bottom:3px;">						
 							<button class="btn btn-success btn-small" ><i class="icon-plus-sign-alt"></i>新建</button>
 							<button class="btn btn-purple btn-small"><i class="icon-heart"></i>精品</button>
@@ -648,7 +672,7 @@
 							<button class="btn btn-warning btn-small" ><i class="icon-download-alt"></i>导出</button>
 							<button class="btn btn-danger btn-small"><i class="icon-trash"></i>删除</button>
 							</ul>
-							<div style="height:35px;"></div>
+							<div style="height:3px;"></div>
 							
 							<div class="widget-header header-color-default">
 								<h5 class="bigger lighter"><i class="icon-table"></i></h5>
@@ -1256,14 +1280,7 @@
 											<td>
 												<a href="#">预览</a>
 											</td>
-										</tr>
-									
-
-										
-										
-
-
-										
+										</tr>								
 									</tbody>
 		                        </table>
 							</div>
@@ -1406,7 +1423,7 @@
 
 				$('#id-date-range-picker-1').daterangepicker();
 			})
-
+         
 		var activeTheme="dhx_skyblue";
 		function jr(){
 			tree1=new dhtmlXTreeObject(document.getElementById('treebox1'),"100%","100%",0);
@@ -1471,6 +1488,8 @@
 
 		$(".chzn-select").chosen(); 
 		$(".chzn-select-deselect").chosen({allow_single_deselect:true}); 
+
+
 		</script>
 
 
