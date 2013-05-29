@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTDXHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<htmlxmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <metahttp-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>演示Sortable</title>
+    <script language="javascript"src="../assets/js/jquery.js"></script>
+    <script language="javascript"src="../assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script language="javascript"src="../assets/js/jquery.cookies.js"></script>
+    <style>
+    .content { 
+      width:120px;
+      height:auto;
+      float:left;
+      clear:right;
+      margin-right:5px;
+      line-height:auto;
+      padding-top:10px;
+      background-color: #363636;
+    }
+    .left {
+      background:#ffe;
+      border-color:#000000;
+      border-style:solid;
+      border-width:1px;
+      cursor:move;
+      margin:0 0 10px;
+      width:100px;
+      height:100px;
+      margin-left:10px;
+      text-align:center;
+      line-height:100px;
+    }
+    .sort_placeholder{
+      background:#CCCCCC;
+      overflow:hidden; 
+    }
+    </style>
+   
+  </head>
+   
+  <body>
+    <div class="alllist">
+      <div class="content " id="content1">
+        <div class="left" id="one">one</div>
+        <div class="left" id="two">two</div>
+        <div class="left" id="three">three</div>
+        <div class="left" id="four">four</div>
+      </div>
+      <div class="content "  id="content2">
+        <div class="left" id="five">five</div>
+        <div class="left" id="six">six</div>
+        <div class="left"id="senven">senven</div>
+        <div class="left" id="eight">eight</div>
+      </div>
+      <div class="content "  id="content3">
+        <div class="left" id="nine">nine</div>
+        <div class="left" id="ten">ten</div>
+        <div class="left"id="eleven">eleven</div>
+        <div class="left"id="twelve">twelve</div>
+      </div>   
+    </div>
+<!--http://sonspring.com/journal/jquery-portlets-->
+ <script>
+    $(function() {
+       var list = $.cookie("list"); 
+       if(list!=null){
+          $(".content").html("");
+          var array = list.split('|');
+          for(var i=0;i<array.length-1;i++){
+            var lastArray = array[i].split('@');
+            for(var j=0;j<lastArray.length-1;j++){
+                 $(".content:eq("+i+")").append('<div class="left" id="'+lastArray[j]+'">'+lastArray[j]+'</div>');                              
+            }
+          }
+        }
+       $(".content").sortable({
+          connectWith:".content",
+          opacity:0.3,
+          dropOnEmpty:true,
+          forceHelperSize:true,
+          forcePlaceholderSize:false,
+          placeholder:'sort_placeholder',
+          tolerance:'pointer',
+          stop:saveLayout
+       });  
+
+       $(".alllist").sortable({
+          connectWith:".alllist",
+          opacity:0.3,
+          dropOnEmpty:true,
+          forceHelperSize:true,
+          forcePlaceholderSize:false,
+          placeholder:'sort_placeholder',
+          tolerance:'pointer',
+          stop:saveLayout
+       });     
+    });
+    function saveLayout(){
+      var list = "";
+      $.each($(".content"),function(m) {
+        $(this).find('div').each(function(){
+                list= list + ($(this).attr('id'));
+                list= list + '@';
+        });
+        list+= '|';
+      });
+      $.cookie("list",list,{ expires: 7 });
+    }
+    </script>
+  </body>
+</html>

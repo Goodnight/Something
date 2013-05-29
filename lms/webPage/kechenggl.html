@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Dashboard - Ace Admin</title>
+		<meta name="description" content="overview & stats" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+		<link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="../assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
+
+		<link rel="stylesheet" href="../assets/css/font-awesome.min.css" />
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="../assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+
+		<!-- page specific plugin styles -->
+		
+		<link rel="stylesheet" href="../assets/css/chosen.css" />
+		<!-- ace styles -->
+		<link rel="stylesheet" href="../assets/css/ace.min.css" />
+		<link rel="stylesheet" href="../assets/css/ace-responsive.min.css" />
+		<link rel="stylesheet" href="../assets/css/ace-skins.min.css" />
+		<!--[if lt IE 9]>
+		  <link rel="stylesheet" href="../assets/css/ace-ie.min.css" />
+		<![endif]-->
+		<style type="text/css">
+		li{margin:0; padding:0; list-style-type:none;}
+		.search-remove-tags{
+			-webkit-border-radius: 3px;
+			-moz-border-radius   : 3px;
+			border-radius        : 3px;
+			-moz-background-clip   : padding;
+			-webkit-background-clip: padding-box;
+			background-clip        : padding-box;
+			background-color: #e4e4e4;
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#eeeeee', GradientType=0 ); 
+			background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(20%, #f4f4f4), color-stop(50%, #f0f0f0), color-stop(52%, #e8e8e8), color-stop(100%, #eeeeee));
+			background-image: -webkit-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+			background-image: -moz-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+			background-image: -o-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+			background-image: linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%); 
+			-webkit-box-shadow: 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);
+			-moz-box-shadow   : 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);
+			box-shadow        : 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);
+			color: #333;
+			border: 1px solid #aaaaaa;
+			line-height: 13px;
+			padding: 3px 5px 3px 5px;
+			margin: 3px 0 3px 5px;
+			position: relative;
+			cursor: default;
+		}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="navbar navbar-inverse">
+		  <div class="navbar-inner">
+		   <div class="container-fluid">
+
+
+			  <a class="brand" href="#"><small><i class="icon-leaf"></i> 中国电信</small> </a>
+			  <ul class="nav ace-nav pull-right">
+					<li class="grey">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<i class="icon-tasks"></i>
+							<span class="badge">4</span>
+						</a>
+						<ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-closer">
+							<li class="nav-header">
+								<i class="icon-ok"></i> 4 Tasks to complete
+							</li>
+							
+							<li>
+								<a href="#">
+									<div class="clearfix">
+										<span class="pull-left">Software Update</span>
+										<span class="pull-right">65%</span>
+									</div>
+									<div class="progress progress-mini"><div class="bar" style="width:65%"></div></div>
+								</a>
+							</li>
+							
+							<li>
+								<a href="#">
+									<div class="clearfix">
+										<span class="pull-left">Hardware Upgrade</span>
+										<span class="pull-right">35%</span>
+									</div>
+									<div class="progress progress-mini progress-danger"><div class="bar" style="width:35%"></div></div>
+								</a>
+							</li>
+							
+							<li>
+								<a href="#">
+									<div class="clearfix">
+										<span class="pull-left">Unit Testing</span>
+										<span class="pull-right">15%</span>
+									</div>
+									<div class="progress progress-mini progress-warning"><div class="bar" style="width:15%"></div></div>
+								</a>
+							</li>
+							
+							<li>
+								<a href="#">
+									<div class="clearfix">
+										<span class="pull-left">Bug Fixes</span>
+										<span class="pull-right">90%</span>
+									</div>
+									<div class="progress progress-mini progress-success progress-striped active"><div class="bar" style="width:90%"></div></div>
+								</a>
+							</li>
+							
+							<li>
+								<a href="#">
+									See tasks with details
+									<i class="icon-arrow-right"></i>
+								</a>
+							</li>
+						</ul>
+					</li>
+
+
+					<li class="purple">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<i class="icon-bell-alt icon-animated-bell icon-only"></i>
+							<span class="badge badge-important">8</span>
+						</a>
+						<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-closer">
+							<li class="nav-header">
+								<i class="icon-warning-sign"></i> 8 Notifications
+							</li>
+							
+							<li>
+								<a href="#">
+									<div class="clearfix">
+										<span class="pull-left"><i class="icon-comment btn btn-mini btn-pink"></i> New comments</span>
+										<span class="pull-right badge badge-info">+12</span>
+									</div>
+								</a>
+							</li>
+							
+							<li>
+								<a href="#">
+									<i class="icon-user btn btn-mini btn-primary"></i> Bob just signed up as an editor ...
+								</a>
+							</li>
+							
+							<li>
+								<a href="#">
+									<div class="clearfix">
+										<span class="pull-left"><i class="icon-shopping-cart btn btn-mini btn-success"></i> New orders</span>
+										<span class="pull-right badge badge-success">+8</span>
+									</div>
+								</a>
+							</li>
+							
+							<li>
+								<a href="#">
+									<div class="clearfix">
+										<span class="pull-left"><i class="icon-twitter btn btn-mini btn-info"></i> Followers</span>
+										<span class="pull-right badge badge-info">+4</span>
+									</div>
+								</a>
+							</li>
+																
+							<li>
+								<a href="#">
+									See all notifications
+									<i class="icon-arrow-right"></i>
+								</a>
+							</li>
+						</ul>
+					</li>
+
+
+					<li class="green">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<i class="icon-envelope-alt icon-animated-vertical icon-only"></i>
+							<span class="badge badge-success">5</span>
+						</a>
+						<ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-closer">
+							<li class="nav-header">
+								<i class="icon-envelope"></i> 5 Messages
+							</li>
+							
+							<li>
+								<a href="#">
+									<img alt="Alex's Avatar" class="msg-photo" src="../assets/avatars/avatar.png">
+									<span class="msg-body">
+										<span class="msg-title">
+											<span class="blue">Alex:</span>
+											Ciao sociis natoque penatibus et auctor ...
+										</span>
+										<span class="msg-time">
+											<i class="icon-time"></i> <span>a moment ago</span>
+										</span>
+									</span>
+								</a>
+							</li>
+							
+							<li>
+								<a href="#">
+									<img alt="Susan's Avatar" class="msg-photo" src="../assets/avatars/avatar3.png">
+									<span class="msg-body">
+										<span class="msg-title">
+											<span class="blue">Susan:</span>
+											Vestibulum id ligula porta felis euismod ...
+										</span>
+										<span class="msg-time">
+											<i class="icon-time"></i> <span>20 minutes ago</span>
+										</span>
+									</span>
+								</a>
+							</li>
+							
+							<li>
+								<a href="#">
+									<img alt="Bob's Avatar" class="msg-photo" src="../assets/avatars/avatar4.png">
+									<span class="msg-body">
+										<span class="msg-title">
+											<span class="blue">Bob:</span>
+											Nullam quis risus eget urna mollis ornare ...
+										</span>
+										<span class="msg-time">
+											<i class="icon-time"></i> <span>3:15 pm</span>
+										</span>
+									</span>
+								</a>
+							</li>
+							
+							<li>
+								<a href="#">
+									See all messages
+									<i class="icon-arrow-right"></i>
+								</a>
+							</li>									
+	
+						</ul>
+					</li>
+
+
+					<li class="light-blue user-profile">
+						<a class="user-menu dropdown-toggle" href="#" data-toggle="dropdown">
+							<img alt="Jason's Photo" src="../assets/avatars/user.jpg" class="nav-user-photo">
+							<span id="user_info">
+								<small>Welcome,</small> Jason
+							</span>
+							<i class="icon-caret-down"></i>
+						</a>
+						<ul id="user_menu" class="pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-closer">
+							<li><a href="#"><i class="icon-cog"></i> Settings</a></li>
+							<li><a href="#"><i class="icon-user"></i> Profile</a></li>
+							<li class="divider"></li>
+							<li><a href="#"><i class="icon-off"></i> Logout</a></li>
+						</ul>
+					</li>
+
+
+
+
+			  </ul><!--/.ace-nav-->
+
+		   </div><!--/.container-fluid-->
+		  </div><!--/.navbar-inner-->
+		</div><!--/.navbar-->
+
+		<div class="container-fluid" id="main-container">
+
+			<a href="#" id="menu-toggler"><span></span></a><!-- menu toggler -->
+
+			<div id="sidebar">
+				
+				<div id="sidebar-shortcuts">
+					<div id="sidebar-shortcuts-large">
+						<button class="btn btn-small btn-success"><i class="icon-signal"></i></button>
+						<button class="btn btn-small btn-info"><i class="icon-pencil"></i></button>
+						<button class="btn btn-small btn-warning"><i class="icon-group"></i></button>
+						<button class="btn btn-small btn-danger"><i class="icon-cogs"></i></button>
+					</div>
+					<div id="sidebar-shortcuts-mini">
+						<span class="btn btn-success"></span>
+						<span class="btn btn-info"></span>
+						<span class="btn btn-warning"></span>
+						<span class="btn btn-danger"></span>
+					</div>
+				</div><!-- #sidebar-shortcuts -->
+
+				<ul class="nav nav-list">
+					
+					<li>
+					  <a href="index.html">
+						<i class="icon-dashboard"></i>
+						<span>待办事项</span>
+						
+					  </a>
+					</li>
+
+					<li class="active open">
+					  <a href="#" class="dropdown-toggle">
+						<i class="icon-file"></i>
+						<span>培训内容</span>
+						<b class="arrow icon-angle-down"></b>
+					  </a>
+					  <ul class="submenu">
+						<li  class="active"><a href="kechenggl.html"><i class="icon-double-angle-right"></i> 课程管理</a></li>
+						<li><a href="mulugl.html"><i class="icon-double-angle-right"></i> 目录管理</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 课程网查询</a></li>
+					  </ul>
+					</li>
+					
+					<li class="">
+					  <a href="#" class="dropdown-toggle">
+						<i class="icon-book"></i>
+						<span>培训需求</span>
+						<b class="arrow icon-angle-down"></b>
+					  </a>
+					  <ul class="submenu" style="display: none;">
+						<li><a href="elements.html"><i class="icon-double-angle-right"></i> 培训需求调查</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 培训需求模板</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 部门培训需求</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 岗位培训需求</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 员工培训需求</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 需求收集时间</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 需求收集项设置</a></li>
+					  </ul>
+					</li>
+
+					
+					<li>
+					  <a href="#">
+						<i class="icon-desktop"></i>
+						<span>培训计划</span>
+					  </a>
+					</li>
+
+
+					<li class="">
+					  <a href="#" class="dropdown-toggle">
+						<i class="icon-list"></i>
+						<span>培训班管理</span>
+						<b class="arrow icon-angle-down"></b>
+					  </a>
+					  <ul class="submenu" style="display: none;">
+						<li><a href="elements.html"><i class="icon-double-angle-right"></i> 培训班管理</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 查看上级培训班</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 外派培训班管理</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 负责人培训班管理</a></li>
+					  </ul>
+					</li>
+					
+					<li class="">
+					  <a href="#" class="dropdown-toggle">
+						<i class="icon-edit"></i>
+						<span>培训评估</span>
+						<b class="arrow icon-angle-down"></b>
+					  </a>
+					  <ul class="submenu" style="display: none;">
+						<li><a href="form-elements.html"><i class="icon-double-angle-right"></i> 行为层评估</a></li>
+						<li><a href="form-wizard.html"><i class="icon-double-angle-right"></i> 反应层评估</a></li>
+						<li><a href="form-elements.html"><i class="icon-double-angle-right"></i> LPI测试</a></li>
+						<li><a href="form-wizard.html"><i class="icon-double-angle-right"></i> 综合评估</a></li>
+						<li><a href="form-elements.html"><i class="icon-double-angle-right"></i> 评估模板</a></li>
+					  </ul>
+					</li>
+
+					
+					<li class="">
+					  <a href="#" class="dropdown-toggle">
+						<i class="icon-list-alt"></i>
+						<span>培训统计</span>
+						<b class="arrow icon-angle-down"></b>
+					  </a>
+					  <ul class="submenu" style="display: none;">
+						<li><a href="form-elements.html"><i class="icon-double-angle-right"></i> 员工学习信息统计</a></li>
+						<li><a href="form-wizard.html"><i class="icon-double-angle-right"></i> 课程学习信息统计</a></li>
+						<li><a href="form-elements.html"><i class="icon-double-angle-right"></i> 机构学习信息统计</a></li>
+						<li><a href="form-wizard.html"><i class="icon-double-angle-right"></i> 培训班统计</a></li>
+						<li><a href="form-elements.html"><i class="icon-double-angle-right"></i> 培训计划统计</a></li>
+					  </ul>
+					</li>
+
+
+					<li class="">
+					  <a href="#" class="dropdown-toggle">
+						<i class="icon-calendar"></i>
+						<span>考试管理</span>
+						<b class="arrow icon-angle-down"></b>
+					  </a>
+					  <ul class="submenu" style="display: none;">
+						<li><a href="calendar.html"><i class="icon-double-angle-right"></i> 考试管理</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 普通考试题库</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 岗位等级题库</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 题型管理</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 阅卷人阅卷</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 试卷审批</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 试卷复核</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 开启阅卷权限</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 权限分配</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 角色管理</a></li>
+					  </ul>
+					</li>
+					
+					<li class="">
+					  <a href="#" class="dropdown-toggle">
+						<i class="icon-picture"></i>
+						<span>岗位认证</span>
+						<b class="arrow icon-angle-down"></b>
+					  </a>
+					  <ul class="submenu" style="display: none;">
+						<li><a href="gallery.html"><i class="icon-double-angle-right"></i> 认证公告管理</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 岗位专业</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 认证登记管理</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 案例类别管理</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 认证直线经理管理</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 考评员评分</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 直线经理审核</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 认证证书查询</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 公告报名列表</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 权限分配</a></li>
+						<li><a href="buttons.html"><i class="icon-double-angle-right"></i> 角色管理</a></li>
+					  </ul>
+					</li>
+
+					<li class="">
+					  <a href="#" class="dropdown-toggle">
+						<i class="icon-th"></i>
+						<span>基础数据</span>
+						<b class="arrow icon-angle-down"></b>
+					  </a>
+					  <ul class="submenu" style="display: none;">
+						<li><a href="grid.html"><i class="icon-double-angle-right"></i> 集团/省岗位管理</a></li>
+						<li><a href="form-wizard.html"><i class="icon-double-angle-right"></i> 机构管理</a></li>
+						<li><a href="form-elements.html"><i class="icon-double-angle-right"></i> 基准岗位管理</a></li>
+						<li><a href="form-wizard.html"><i class="icon-double-angle-right"></i> 员工信息</a></li>
+						<li><a href="form-elements.html"><i class="icon-double-angle-right"></i> 临时账号管理</a></li>
+					  </ul>
+					</li>
+
+					
+					<li class="">
+					  <a href="#" class="dropdown-toggle">
+						<i class="icon-user-md"></i>
+						<span>权限管理</span>
+						<b class="arrow icon-angle-down"></b>
+					  </a>
+					  <ul class="submenu" style="display: none;">
+						<li><a href="pricing.html"><i class="icon-double-angle-right"></i> 管理角色列表</a></li>
+						<li><a href="invoice.html"><i class="icon-double-angle-right"></i> 管理人员列表</a></li>
+					  </ul>
+					</li>
+
+					<li>
+					  <a href="#">
+						<i class="icon-tasks"></i>
+						<span>会议管理</span>
+					  </a>
+					</li>
+
+					<li class="">
+					  <a href="#" class="dropdown-toggle">
+						<i class="icon-bar-chart"></i>
+						<span>集团积分</span>
+						<b class="arrow icon-angle-down"></b>
+					  </a>
+					  <ul class="submenu" style="display: none;">
+						<li><a href="pricing.html"><i class="icon-double-angle-right"></i> 员工积分</a></li>
+						<li><a href="invoice.html"><i class="icon-double-angle-right"></i> 部门积分</a></li>
+					  </ul>
+					</li>
+					
+					<li>
+					  <a href="#">
+						<i class="icon-suitcase"></i>
+						<span>岗位体系</span>
+					  </a>
+					</li>
+				</ul><!--/.nav-list-->
+
+				<div id="sidebar-collapse"><i class="icon-double-angle-left"></i></div>
+			</div><!--/#sidebar-->
+
+		
+			<div id="main-content" class="clearfix">
+					
+				<div id="breadcrumbs">
+					<ul class="breadcrumb">
+						<li><i class="icon-home"></i> <a href="#">首页</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+						<li class="active">培训内容</li>
+					</ul><!--.breadcrumb-->
+
+					<div id="nav-search">
+						<form class="form-search">
+								<span class="input-icon">
+									<input autocomplete="off" id="nav-search-input" type="text" class="input-small search-query" placeholder="Search ..." />
+									<i id="nav-search-icon" class="icon-search"></i>
+								</span>
+						</form>
+					</div><!--#nav-search-->
+				</div><!--#breadcrumbs-->
+
+				<div id="page-content" class="clearfix">
+					
+					<div class="page-header position-relative">
+						<h1>培训内容 <small><i class="icon-double-angle-right"></i> 在线培训中心 <i class="icon-double-angle-right"></i> 课程管理</small></h1>
+					</div><!--/page-header-->
+
+					
+
+					<div class="row-fluid">
+						<!-- PAGE CONTENT BEGINS HERE -->
+						<div class="span9">
+							<form class="form-search form-horizontal" id="search-form">		
+							    <input class="span7" id="search-key" type="text">
+					   				
+								<label>
+									&nbsp;
+									<input name="form-field-radio" type="radio" /><span class="lbl"> 只搜名称</span>
+								</label>
+							
+								<label>
+									<input name="form-field-radio" type="radio" /><span class="lbl"> 全文</span>
+								</label>
+								
+							    <button class="btn btn-small btn-info pull-right" type="submit"><i class="icon-search icon-on-right"></i> 搜索</button>		    
+							</form>			
+
+							<div class="widget-box transparent">
+									<div class="widget-header " style="min-height:1px;">
+										
+									</div>
+
+									<div class="widget-body">
+										<div class="widget-main no-padding">
+											<table class="table table-bordered table-striped">
+												<thead>
+													<tr>
+														<th>
+															课程目录：
+														</th>
+
+														<th>
+															<ul class="breadcrumb" style="">
+															
+															<li class="search-remove-tags"> 一级目录</li>
+															<li class="search-remove-tags"> 二级目录</li>
+															<li><h5>&nbsp;&nbsp;<a href="#"><i class="icon-plus-sign-alt icon-large"></i></a></h5></li>
+
+															
+															
+														</ul>
+														</th>
+													</tr>
+												</thead>
+
+												<tbody>
+													<tr>
+														<td>课程类型：</td>
+														<td> 
+															 <ul class="breadcrumb">
+					                                            <li><a href="#" id="s-1">所有</a></li>
+					                                            <li><a href="#" id="s-2">面授课程</a></li>
+					                                            <li><a href="#" id="s-3">线上课程</a></li>
+					                                            <li><a href="#" id="s-4">同步课堂</a></li>
+					                                        </ul>
+														</td>
+												
+													</tr>
+
+													<tr>
+														<td>课程来源：</td>
+														<td>
+															<ul class="breadcrumb">
+					                                            <li><a href="#" id="s-1">所有</a></li>
+					                                            <li><a href="#" id="s-2">企业课程</a></li>
+					                                            <li><a href="#" id="s-3">商务在线</a></li>
+					                                        </ul> 
+														</td>
+														
+													</tr>
+
+													<tr>
+														<td>授权状况：</td>
+														<td>
+															<ul class="breadcrumb">
+					                                            <li><a href="#" id="s-1">所有</a></li>
+					                                            <li><a href="#" id="s-2">&nbsp;已授权&nbsp;</a></li>
+					                                            <li><a href="#" id="s-3">&nbsp;&nbsp;未授权 </a></li>
+					                                        </ul>
+														</td>
+														
+													</tr>
+
+													<tr>
+														<td>课程排列：</td>
+														<td>
+															<ul class="breadcrumb">
+															<label>
+																
+																<input name="form-field-checkbox" type="checkbox" /><span class="lbl"> 人气</span>
+																&nbsp;&nbsp;
+																<input name="form-field-checkbox" type="checkbox" /><span class="lbl"> 最新</span>
+															</label> 
+															</ul>
+														</td>
+														
+													</tr>
+
+													<tr>
+														<td>课程状态：</td>
+														<td>
+															<ul class="breadcrumb">
+								                                <label>
+																	
+																	<input name="form-field-radio" type="radio" /><span class="lbl"> 所有</span>
+																	&nbsp;&nbsp;
+																	<input name="form-field-radio" type="radio" /><span class="lbl"> 公开</span>
+																	&nbsp;&nbsp;
+																	<input name="form-field-radio" type="radio" /><span class="lbl"> 不公开</span>
+																</label>
+					                                        </ul>
+														</td>
+														
+													</tr>
+												</tbody>
+											</table>
+										</div><!--/widget-main-->
+									</div><!--/widget-body-->
+							</div><!--/widget-box-->
+							<hr/>
+							<div class="widget-header header-color-default">
+								<h5 class="text-info bigger lighter"><i class="icon-table"></i> 课程列表</h5>
+								
+								
+							</div>
+							<div class="widget-body">
+								<table id="table_report" class="table table-striped table-bordered table-hover">
+									<thead>
+										<tr>
+											<th class="center">
+												<label><input type="checkbox" /><span class="lbl"></span><p>全选</p></label>
+
+											</th>
+											<th>
+												<li class="pull-right">					
+													<button class="btn-smaller">删除所选课程</button>
+													<button class="btn-smaller">所选课程批量授权</button>
+													<button class="btn-smaller">我的录入课程</button>
+												</li>
+											</th>
+										
+										</tr>
+									</thead>
+									
+									<tbody>
+										
+										<tr>
+											<td class="span2">
+												<img src="../assets/images/img02.jpg">
+												<label><input type='checkbox'/><span class="lbl"><p class="pull-right">&nbsp;&nbsp;108人称赞<p></span></label>
+												
+											</td>
+											<td>
+												<ul>
+													<a href='#'><h4>养成良好的学习习惯</h4></a>
+													<hr />
+													<li>标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;签：
+														<ul class="breadcrumb" style="">
+															
+															<li class="search-remove-tags"> 标准课件</li>
+															<li class="search-remove-tags"> 直播课程</li>
+															<li class="search-remove-tags"> 已发布</li>
+															<li class="search-remove-tags"> 中国电信集团</li>
+															
+														</ul>
+													</li> 
+													<div class="row-fuild">	
+														<div class="span4">
+															<li>评论人数：</li>
+															<li>学习人数：</li>
+														</div>
+														<div class="span4">
+															<li>相关课程：</li>
+															<li>学习时长：</li>
+														</div>
+														<div class="span4">
+															
+														</div>
+													</div>
+													<div  class="row-fuild">
+														<div class="span12">
+															<li>所属分类：</li>
+															<ul class="inline pull-right">
+																<li><a href="#"><span class="badge badge-warning"><i class="icon-bar-chart icon-large"></i></span></a></li>
+																<li><a href="#"><span class="badge badge-important"><i class="icon-edit icon-large"></i></span></a></li>
+																<li><a href="#"><span class="badge badge-info"><i class="icon-group icon-large"></i></span></a></li>
+																<li><a href="#"><span class="badge badge-purple"><i class="icon-trash icon-large"></i></span></a></li>
+															</ul>
+														</div>
+
+													</div>
+										
+												</ul>
+											</td>
+										
+										</tr>
+
+										<tr>
+											<td class="span2">
+												<img src="../assets/images/img02.jpg">
+												<label><input type='checkbox'/><span class="lbl"><p class="pull-right">&nbsp;&nbsp;108人称赞<p></span></label>
+												
+											</td>
+											<td>
+												<ul>
+													<a href='#'><h4>养成良好的学习习惯</h4></a>
+													<hr />
+													<li>标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;签：
+														<ul class="breadcrumb" style="">
+															
+															<li class="search-remove-tags"> 标准课件</li>
+															<li class="search-remove-tags"> 直播课程</li>
+															<li class="search-remove-tags"> 已发布</li>
+															<li class="search-remove-tags"> 中国电信集团</li>
+															
+														</ul>
+													</li>
+													<div class="row-fuild">	
+														<div class="span4">
+															<li>评论人数：</li>
+															<li>学习人数：</li>
+														</div>
+														<div class="span4">
+															<li>相关课程：</li>
+															<li>学习时长：</li>
+														</div>
+														<div class="span4">
+															
+														</div>
+													</div>
+													<div  class="row-fuild">
+														<div class="span12">
+															<li>所属分类：</li>
+															<ul class="inline pull-right">
+																<li><a href="#"><span class="badge badge-warning"><i class="icon-bar-chart icon-large"></i></span></a></li>
+																<li><a href="#"><span class="badge badge-important"><i class="icon-edit icon-large"></i></span></a></li>
+																<li><a href="#"><span class="badge badge-info"><i class="icon-group icon-large"></i></span></a></li>
+																<li><a href="#"><span class="badge badge-purple"><i class="icon-trash icon-large"></i></span></a></li>
+															</ul>
+														</div>
+
+													</div>
+										
+												</ul>
+											</td>
+										
+										</tr>
+										
+										<tr>
+											<td class="span2">
+												<img src="../assets/images/img02.jpg">
+												<label><input type='checkbox'/><span class="lbl"><p class="pull-right">&nbsp;&nbsp;108人称赞<p></span></label>
+												
+											</td>
+											<td>
+												<ul>
+													<a href='#'><h4>养成良好的学习习惯</h4></a>
+													<hr />
+													<li>标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;签：
+														<ul class="breadcrumb" style="">
+															
+															<li class="search-remove-tags"> 标准课件</li>
+															<li class="search-remove-tags"> 直播课程</li>
+															<li class="search-remove-tags"> 已发布</li>
+															<li class="search-remove-tags"> 中国电信集团</li>
+															
+														</ul>
+													</li>
+													<div class="row-fuild">	
+														<div class="span4">
+															<li>评论人数：</li>
+															<li>学习人数：</li>
+														</div>
+														<div class="span4">
+															<li>相关课程：</li>
+															<li>学习时长：</li>
+														</div>
+														<div class="span4">
+															
+														</div>
+													</div>
+													<div  class="row-fuild">
+														<div class="span12">
+															<li>所属分类：</li>
+															<ul class="inline pull-right">
+																<li><a href="#"><span class="badge badge-warning"><i class="icon-bar-chart icon-large"></i></span></a></li>
+																<li><a href="#"><span class="badge badge-important"><i class="icon-edit icon-large"></i></span></a></li>
+																<li><a href="#"><span class="badge badge-info"><i class="icon-group icon-large"></i></span></a></li>
+																<li><a href="#"><span class="badge badge-purple"><i class="icon-trash icon-large"></i></span></a></li>
+															</ul>
+														</div>
+
+													</div>
+										
+												</ul>
+											</td>
+										
+										</tr>
+
+										<tr>
+											<td class="span2">
+												<img src="../assets/images/img02.jpg">
+												<label><input type='checkbox'/><span class="lbl"><p class="pull-right">&nbsp;&nbsp;108人称赞<p></span></label>
+												
+											</td>
+											<td>
+												<ul>
+													<a href='#'><h4>养成良好的学习习惯</h4></a>
+													<hr />
+													<li>标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;签：
+														<ul class="breadcrumb" style="">
+															
+															<li class="search-remove-tags"> 标准课件</li>
+															<li class="search-remove-tags"> 直播课程</li>
+															<li class="search-remove-tags"> 已发布</li>
+															<li class="search-remove-tags"> 中国电信集团</li>
+															
+														</ul>
+													</li>
+													<div class="row-fuild">	
+														<div class="span4">
+															<li>评论人数：</li>
+															<li>学习人数：</li>
+														</div>
+														<div class="span4">
+															<li>相关课程：</li>
+															<li>学习时长：</li>
+														</div>
+														<div class="span4">
+															
+														</div>
+													</div>
+													<div  class="row-fuild">
+														<div class="span12">
+															<li>所属分类：</li>
+															<ul class="inline pull-right">
+																<li><a href="#"><span class="badge badge-warning"><i class="icon-bar-chart icon-large"></i></span></a></li>
+																<li><a href="#"><span class="badge badge-important"><i class="icon-edit icon-large"></i></span></a></li>
+																<li><a href="#"><span class="badge badge-info"><i class="icon-group icon-large"></i></span></a></li>
+																<li><a href="#"><span class="badge badge-purple"><i class="icon-trash icon-large"></i></span></a></li>
+															</ul>
+														</div>
+
+													</div>
+										
+												</ul>
+											</td>
+										
+										</tr>
+										
+									</tbody>
+		                        </table>
+							</div>
+
+						</div>
+
+						<div class="span3">
+							<div class="widget-box">
+								<div class="widget-header">
+									<h4>热门授权课程</h4>
+									<span class="widget-toolbar">
+										<a href="#" data-action="collapse"><i class="icon-chevron-up"></i></a>
+										<a href="#" data-action="close"><i class="icon-remove"></i></a>
+									</span>
+								</div>
+								<div class="widget-body">
+									 <div class="widget-main">
+										<table id="table_report" class="table table-striped table-bordered table-hover">
+									
+											<tbody>
+												
+												<tr>
+													<td>
+														<li>
+														<input type="checkbox" /><span class="lbl"></span>
+														<a class="pull-right" href='#'><h4>养成良好的学习习惯</h4></a>
+														</li>
+														<hr />
+														<li>标签：</li>
+														</br>
+														
+															<div class="row-fuild">
+																<div class="span4">
+																	<div class="pull-left">
+																		<img src="../assets/images/img02.jpg">
+																	</div>			
+																</div>
+																<div class="span8">
+																	<li>评论人数：</li>
+																	<li>学习人数：</li>
+																	<li>相关课程：</li>
+																	<li>学习时长：</li>
+																</div>
+															</div>
+														
+													</td>
+
+
+												</tr>
+												<tr>
+													<td>
+														<li>
+														<input type="checkbox" /><span class="lbl"></span>
+														<a class="pull-right" href='#'><h4>养成良好的学习习惯</h4></a>
+														</li>
+														<hr />
+														<li>标签：</li>
+														</br>
+														
+															<div class="row-fuild">
+																<div class="span4">
+																	<div class="pull-left">
+																		<img src="../assets/images/img02.jpg">
+																	</div>			
+																</div>
+																<div class="span8">
+																	<li>评论人数：</li>
+																	<li>学习人数：</li>
+																	<li>相关课程：</li>
+																	<li>学习时长：</li>
+																</div>
+															</div>
+														
+													</td>
+
+														
+												</tr>
+
+												<tr>
+													<td>
+														<li>
+														<input type="checkbox" /><span class="lbl"></span>
+														<a class="pull-right" href='#'><h4>养成良好的学习习惯</h4></a>
+														</li>
+														<hr />
+														<li>标签：</li>
+														</br>
+														
+															<div class="row-fuild">
+																<div class="span4">
+																	<div class="pull-left">
+																		<img src="../assets/images/img02.jpg">
+																	</div>			
+																</div>
+																<div class="span8">
+																	<li>评论人数：</li>
+																	<li>学习人数：</li>
+																	<li>相关课程：</li>
+																	<li>学习时长：</li>
+																</div>
+															</div>
+														
+													</td>
+
+														
+												</tr>	
+											</tbody>
+				                        </table>
+									</div>
+								</div>
+							</div>
+							<div class="widget-box">
+								<div class="widget-header widget-header-flat">
+									<h4>分类导航</h4>
+								</div>
+								
+								<div class="widget-body">
+									<div class="widget-main">
+										<div class="row-fluid">
+											<div class="span5">
+												<ul class="pull-right">
+													<li><a href="#">管理11</a></li>
+													</br>
+													<a href="#"><li class="text-info">管理22</li></a>
+													</br>
+													<a href="#"><li class="text-error">管理33</li></a>
+													</br>
+													<a href="#"><li class="text-success">管理44</li></a>
+													</br>
+													<a href="#"><li class="text-warning">管理55</li></a>
+													</br>
+													<a href="#"><li class="muted">管理66</li></a>
+												</ul>
+											</div>
+											
+											<div class="span7">
+												<ul class="pull-left">
+													<li><a href="#">领导力11</a></li>
+													</br>
+													<a href="#"><li class="text-info">领导力22</li></a>
+													</br>
+													<a href="#"><li class="text-error">领导力33</li></a>
+													</br>
+													<a href="#"><li class="text-success">领导力44</li></a>
+													</br>
+													<a href="#"><li class="text-warning">领导力55</li></a>
+													</br>
+													<a href="#"><li class="muted">领导力66</li></a>
+												</ul>
+											</div>
+
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- PAGE CONTENT ENDS HERE -->	
+	 				</div><!--/#page-content-->
+
+				</div><!--/widget-body-->
+
+			</div><!--/row-->
+	
+	
+					  
+
+			<div id="ace-settings-container">
+				<div class="btn btn-app btn-mini btn-warning" id="ace-settings-btn">
+					<i class="icon-cog"></i>
+				</div>
+				<div id="ace-settings-box">
+					<div>
+						<div class="pull-left">
+							<select id="skin-colorpicker" class="hidden">
+								<option data-class="default" value="#438EB9">#438EB9</option>
+								<option data-class="skin-1" value="#222A2D">#222A2D</option>
+								<option data-class="skin-2" value="#C6487E">#C6487E</option>
+								<option data-class="skin-3" value="#D0D0D0">#D0D0D0</option>
+							</select>
+						</div>
+						<span>&nbsp; Choose Skin</span>
+					</div>
+					<div><input type="checkbox" class="ace-checkbox-2" id="ace-settings-header" /><label class="lbl" for="ace-settings-header"> Fixed Header</label></div>
+					<div><input type="checkbox" class="ace-checkbox-2" id="ace-settings-sidebar" /><label class="lbl" for="ace-settings-sidebar"> Fixed Sidebar</label></div>
+				</div>
+			</div><!--/#ace-settings-container-->
+		
+
+		</div><!--/.fluid-container#main-container-->
+
+
+		<a href="#" id="btn-scroll-up" class="btn btn-small btn-inverse">
+			<i class="icon-double-angle-up icon-only"></i>
+		</a>
+
+
+		<!-- basic scripts -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript">
+		window.jQuery || document.write("<script src='../assets/js/jquery-1.9.1.min.js'>\x3C/script>");
+		</script>
+		
+		<script src="../assets/js/bootstrap.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+		
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="../assets/js/excanvas.min.js"></script>
+		<![endif]-->
+
+		<script type="text/javascript" src="../assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+
+		<script type="text/javascript" src="../assets/js/jquery.ui.touch-punch.min.js"></script>
+
+		<script type="text/javascript" src="../assets/js/jquery.slimscroll.min.js"></script>
+
+		<script type="text/javascript" src="../assets/js/jquery.easy-pie-chart.min.js"></script>
+
+		<script type="text/javascript" src="../assets/js/jquery.sparkline.min.js"></script>
+
+		<script type="text/javascript" src="../assets/js/jquery.flot.min.js"></script>
+
+		<script type="text/javascript" src="../assets/js/jquery.flot.pie.min.js"></script>
+
+		<script type="text/javascript" src="../assets/js/jquery.flot.resize.min.js"></script>
+
+		<script type="text/javascript" src="../assets/js/chosen.jquery.min.js"></script>
+
+		<script type="text/javascript" src="../assets/js/jquery.knob.min.js"></script>
+
+		<script type="text/javascript" src="../assets/js/jquery.maskedinput.min.js"></script>
+		<script language="javascript"src="../assets/js/jquery.cookies.js"></script>
+
+		<!-- ace scripts -->
+		<script src="../assets/js/ace-elements.min.js"></script>
+		<script src="../assets/js/ace.min.js"></script>
+
+		<script type="text/javascript" src="../assets/js/jquery.dataTables.min.js"></script>
+
+		<script type="text/javascript" src="../assets/js/jquery.dataTables.bootstrap.js"></script>
+		<!-- inline scripts related to this page -->
+		
+		<script type="text/javascript">
+
+		$(function() {
+			var oTable1 = $('#table_report').dataTable( {
+				"aoColumns": [
+			      { "bSortable": false },
+			      { "bSortable": false },
+				],
+				"bFilter": false
+			} );
+				
+				
+			$('table th input:checkbox').on('click' , function(){
+				var that = this;
+				$(this).closest('table').find('tr > td:first-child input:checkbox')
+				.each(function(){
+					this.checked = that.checked;
+					$(this).closest('tr').toggleClass('selected');
+				});
+					
+			});
+
+		
+
+
+			$('[data-rel="tooltip"]').tooltip();
+		})
+
+
+
+
+		</script>
+
+	</body>
+</html>
